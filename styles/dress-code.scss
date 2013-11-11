@@ -1,0 +1,254 @@
+@import "compass/reset",
+        "compass/css3";
+
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:700|Amatic+SC:700|Amatic+SC);
+
+$color-scheme-primary: black;
+$color-scheme-secondary: white;
+$color-scheme-accent: #d90077;
+$color-scheme-link: #ccc;
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+body {
+	background: #111;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 16px;
+	line-height: 1.2em;
+}
+
+::selection {
+	color: white;
+	background: $color-scheme-accent;
+	text-shadow: none;
+}
+
+.logo {
+	height: 450px;
+	width: 450px;
+}
+#logo {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	height: 225px;
+	width: 225px;
+
+	@include opacity(1.0);
+	@include transition(all 1s linear);
+
+	.logo-less & {
+		visibility: hidden;
+
+		@include opacity(0.0);
+	}
+}
+
+.reveal {
+	font-family: "Lato", sans-serif;
+	font-size: 36px;
+	font-weight: 200;
+	letter-spacing: -0.02em;
+	color: #eeeeee;
+
+	/*********************************************
+	 * HEADERS
+	 *********************************************/
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-family: 'Amatic SC', cursive;
+		font-weight: 700;
+
+		span {
+			font-weight: normal;
+		}
+	}
+	$h1-font-size: 100px;
+	$h6-font-size: 64px;
+
+	$hmax: 6;
+	@for $i from 1 through $hmax {
+		$font-size: floor(($h1-font-size - $h6-font-size) * ($hmax - $i) / $hmax + $h6-font-size);
+		h#{$i} {
+			line-height: $font-size;
+			font-size: $font-size;
+		}
+	}
+
+	.primary {
+		color: $color-scheme-primary;
+	}
+	.secondary {
+		color: $color-scheme-secondary;
+	}
+	.accent {
+		color: $color-scheme-accent;
+	}
+
+	.headline {
+		$border-width: 5px;
+
+		padding: 20px;
+		border-width: $border-width;
+		border-style: solid;
+
+		&.left {
+			width: 40%;
+			position: absolute;
+			left: 0;
+			margin-left: -500px;
+			padding-left: 500px;
+			text-align: right;
+		}
+		&.right {
+			width: 40%;
+			position: absolute;
+			right: 0;
+			margin-right: -500px;
+			padding-right: 500px;
+			text-align: left;
+		}
+	}
+
+	$colors: 'p' $color-scheme-primary, 's' $color-scheme-secondary, 'a' $color-scheme-accent;
+	@each $color_p1 in $colors {
+		$name1: nth($color_p1, 1);
+		$color1: nth($color_p1, 2);
+		@each $color_p2 in $colors {
+			$name2: nth($color_p2, 1);
+			$color2: nth($color_p2, 2);
+			@each $color_p3 in $colors {
+				$name3: nth($color_p3, 1);
+				$color3: nth($color_p3, 2);
+				@if $color1 != $color2 {
+					.#{$name1}#{$name2}#{$name3} {
+						color: $color1;
+						background-color: $color2;
+						border-color: $color3;
+					}
+				}
+			}
+		}
+	}
+	.shift-left {
+		margin-left: -100px;
+	}
+	.shift-right {
+		margin-right: -100px;
+	}
+	.footnote {
+		position: absolute;
+		right: 0;
+		margin-top: 200px;
+		font-size: 50%;
+		text-align: left;
+		text-indent: -18px;
+
+		&:before {
+			content: '* - ';
+		}
+	}
+}
+
+.subtle-background {
+	.backgrounds {
+		.slide-background.present {
+			@include opacity(0.5);
+			@include filter(grayscale(100%));
+		}
+	}
+}
+
+/*********************************************
+ * LINKS
+ *********************************************/
+.reveal a:not(.image) {
+	color: $color-scheme-link;
+	text-decoration: none;
+	@include transition(color .15s ease);
+}
+
+.reveal a:not(.image):hover {
+	color: fade-out($color-scheme-accent, 0.20);
+	text-shadow: none;
+	border: none;
+}
+
+.reveal .roll span:after {
+	color: #fff;
+	background: #0d99a5;
+}
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+.reveal section img {
+	margin: 15px 0px;
+	background: rgba(255, 255, 255, 0.12);
+	border: 4px solid #eeeeee;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+	@include transition(all .2s linear);
+}
+
+.reveal a:hover img {
+	background: rgba(255, 255, 255, 0.2);
+	border-color: fade-out($color-scheme-accent, 0.10);
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls div.navigate-left,
+.reveal .controls div.navigate-left.enabled {
+	border-right-color: fade-out($color-scheme-accent, 0.10);
+}
+
+.reveal .controls div.navigate-right,
+.reveal .controls div.navigate-right.enabled {
+	border-left-color: fade-out($color-scheme-accent, 0.10);
+}
+
+.reveal .controls div.navigate-up,
+.reveal .controls div.navigate-up.enabled {
+	border-bottom-color: fade-out($color-scheme-accent, 0.10);
+}
+
+.reveal .controls div.navigate-down,
+.reveal .controls div.navigate-down.enabled {
+	border-top-color: fade-out($color-scheme-accent, 0.10);
+}
+
+.reveal .controls div.navigate-left.enabled:hover {
+	border-right-color: fade-out($color-scheme-accent, 0.20);
+}
+
+.reveal .controls div.navigate-right.enabled:hover {
+	border-left-color: fade-out($color-scheme-accent, 0.20);
+}
+
+.reveal .controls div.navigate-up.enabled:hover {
+	border-bottom-color: fade-out($color-scheme-accent, 0.20);
+}
+
+.reveal .controls div.navigate-down.enabled:hover {
+	border-top-color: fade-out($color-scheme-accent, 0.20);
+}
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.reveal .progress span {
+	background: fade-out($color-scheme-accent, 0.10);
+	@include transition(width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985));
+}
+

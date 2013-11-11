@@ -1,0 +1,457 @@
+@import url(http://fonts.googleapis.com/css?family=Josefin+Sans:700|Amatic+SC:700|Amatic+SC);
+/* line 17, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../.rvm/gems/ruby-1.9.3-p392/gems/compass-0.12.2/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/*********************************************
+ * GLOBAL STYLES
+ *********************************************/
+/* line 14, ../dress-code.scss */
+body {
+  background: #111;
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.2em;
+}
+
+/* line 21, ../dress-code.scss */
+::selection {
+  color: white;
+  background: #d90077;
+  text-shadow: none;
+}
+
+/* line 27, ../dress-code.scss */
+.logo {
+  height: 450px;
+  width: 450px;
+}
+
+/* line 31, ../dress-code.scss */
+#logo {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  height: 225px;
+  width: 225px;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  -webkit-transition: all 1s linear;
+  -moz-transition: all 1s linear;
+  -o-transition: all 1s linear;
+  transition: all 1s linear;
+}
+/* line 41, ../dress-code.scss */
+.logo-less #logo {
+  visibility: hidden;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+
+/* line 48, ../dress-code.scss */
+.reveal {
+  font-family: "Lato", sans-serif;
+  font-size: 36px;
+  font-weight: 200;
+  letter-spacing: -0.02em;
+  color: #eeeeee;
+  /*********************************************
+   * HEADERS
+   *********************************************/
+}
+/* line 63, ../dress-code.scss */
+.reveal h1,
+.reveal h2,
+.reveal h3,
+.reveal h4,
+.reveal h5,
+.reveal h6 {
+  font-family: 'Amatic SC', cursive;
+  font-weight: 700;
+}
+/* line 67, ../dress-code.scss */
+.reveal h1 span,
+.reveal h2 span,
+.reveal h3 span,
+.reveal h4 span,
+.reveal h5 span,
+.reveal h6 span {
+  font-weight: normal;
+}
+/* line 77, ../dress-code.scss */
+.reveal h1 {
+  line-height: 94px;
+  font-size: 94px;
+}
+/* line 77, ../dress-code.scss */
+.reveal h2 {
+  line-height: 88px;
+  font-size: 88px;
+}
+/* line 77, ../dress-code.scss */
+.reveal h3 {
+  line-height: 82px;
+  font-size: 82px;
+}
+/* line 77, ../dress-code.scss */
+.reveal h4 {
+  line-height: 76px;
+  font-size: 76px;
+}
+/* line 77, ../dress-code.scss */
+.reveal h5 {
+  line-height: 70px;
+  font-size: 70px;
+}
+/* line 77, ../dress-code.scss */
+.reveal h6 {
+  line-height: 64px;
+  font-size: 64px;
+}
+/* line 83, ../dress-code.scss */
+.reveal .primary {
+  color: black;
+}
+/* line 86, ../dress-code.scss */
+.reveal .secondary {
+  color: white;
+}
+/* line 89, ../dress-code.scss */
+.reveal .accent {
+  color: #d90077;
+}
+/* line 93, ../dress-code.scss */
+.reveal .headline {
+  padding: 20px;
+  border-width: 5px;
+  border-style: solid;
+}
+/* line 100, ../dress-code.scss */
+.reveal .headline.left {
+  width: 40%;
+  position: absolute;
+  left: 0;
+  margin-left: -500px;
+  padding-left: 500px;
+  text-align: right;
+}
+/* line 108, ../dress-code.scss */
+.reveal .headline.right {
+  width: 40%;
+  position: absolute;
+  right: 0;
+  margin-right: -500px;
+  padding-right: 500px;
+  text-align: left;
+}
+/* line 129, ../dress-code.scss */
+.reveal .psp {
+  color: black;
+  background-color: white;
+  border-color: black;
+}
+/* line 129, ../dress-code.scss */
+.reveal .pss {
+  color: black;
+  background-color: white;
+  border-color: white;
+}
+/* line 129, ../dress-code.scss */
+.reveal .psa {
+  color: black;
+  background-color: white;
+  border-color: #d90077;
+}
+/* line 129, ../dress-code.scss */
+.reveal .pap {
+  color: black;
+  background-color: #d90077;
+  border-color: black;
+}
+/* line 129, ../dress-code.scss */
+.reveal .pas {
+  color: black;
+  background-color: #d90077;
+  border-color: white;
+}
+/* line 129, ../dress-code.scss */
+.reveal .paa {
+  color: black;
+  background-color: #d90077;
+  border-color: #d90077;
+}
+/* line 129, ../dress-code.scss */
+.reveal .spp {
+  color: white;
+  background-color: black;
+  border-color: black;
+}
+/* line 129, ../dress-code.scss */
+.reveal .sps {
+  color: white;
+  background-color: black;
+  border-color: white;
+}
+/* line 129, ../dress-code.scss */
+.reveal .spa {
+  color: white;
+  background-color: black;
+  border-color: #d90077;
+}
+/* line 129, ../dress-code.scss */
+.reveal .sap {
+  color: white;
+  background-color: #d90077;
+  border-color: black;
+}
+/* line 129, ../dress-code.scss */
+.reveal .sas {
+  color: white;
+  background-color: #d90077;
+  border-color: white;
+}
+/* line 129, ../dress-code.scss */
+.reveal .saa {
+  color: white;
+  background-color: #d90077;
+  border-color: #d90077;
+}
+/* line 129, ../dress-code.scss */
+.reveal .app {
+  color: #d90077;
+  background-color: black;
+  border-color: black;
+}
+/* line 129, ../dress-code.scss */
+.reveal .aps {
+  color: #d90077;
+  background-color: black;
+  border-color: white;
+}
+/* line 129, ../dress-code.scss */
+.reveal .apa {
+  color: #d90077;
+  background-color: black;
+  border-color: #d90077;
+}
+/* line 129, ../dress-code.scss */
+.reveal .asp {
+  color: #d90077;
+  background-color: white;
+  border-color: black;
+}
+/* line 129, ../dress-code.scss */
+.reveal .ass {
+  color: #d90077;
+  background-color: white;
+  border-color: white;
+}
+/* line 129, ../dress-code.scss */
+.reveal .asa {
+  color: #d90077;
+  background-color: white;
+  border-color: #d90077;
+}
+/* line 138, ../dress-code.scss */
+.reveal .shift-left {
+  margin-left: -100px;
+}
+/* line 141, ../dress-code.scss */
+.reveal .shift-right {
+  margin-right: -100px;
+}
+/* line 144, ../dress-code.scss */
+.reveal .footnote {
+  position: absolute;
+  right: 0;
+  margin-top: 200px;
+  font-size: 50%;
+  text-align: left;
+  text-indent: -18px;
+}
+/* line 152, ../dress-code.scss */
+.reveal .footnote:before {
+  content: '* - ';
+}
+
+/* line 160, ../dress-code.scss */
+.subtle-background .backgrounds .slide-background.present {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+  -webkit-filter: grayscale(100%);
+  -moz-filter: grayscale(100%);
+  filter: grayscale(100%);
+}
+
+/*********************************************
+ * LINKS
+ *********************************************/
+/* line 170, ../dress-code.scss */
+.reveal a:not(.image) {
+  color: #cccccc;
+  text-decoration: none;
+  -webkit-transition: color 0.15s ease;
+  -moz-transition: color 0.15s ease;
+  -o-transition: color 0.15s ease;
+  transition: color 0.15s ease;
+}
+
+/* line 176, ../dress-code.scss */
+.reveal a:not(.image):hover {
+  color: rgba(217, 0, 119, 0.8);
+  text-shadow: none;
+  border: none;
+}
+
+/* line 182, ../dress-code.scss */
+.reveal .roll span:after {
+  color: #fff;
+  background: #0d99a5;
+}
+
+/*********************************************
+ * IMAGES
+ *********************************************/
+/* line 190, ../dress-code.scss */
+.reveal section img {
+  margin: 15px 0px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 4px solid #eeeeee;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+
+/* line 198, ../dress-code.scss */
+.reveal a:hover img {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(217, 0, 119, 0.9);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.55);
+}
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+/* line 208, ../dress-code.scss */
+.reveal .controls div.navigate-left,
+.reveal .controls div.navigate-left.enabled {
+  border-right-color: rgba(217, 0, 119, 0.9);
+}
+
+/* line 213, ../dress-code.scss */
+.reveal .controls div.navigate-right,
+.reveal .controls div.navigate-right.enabled {
+  border-left-color: rgba(217, 0, 119, 0.9);
+}
+
+/* line 218, ../dress-code.scss */
+.reveal .controls div.navigate-up,
+.reveal .controls div.navigate-up.enabled {
+  border-bottom-color: rgba(217, 0, 119, 0.9);
+}
+
+/* line 223, ../dress-code.scss */
+.reveal .controls div.navigate-down,
+.reveal .controls div.navigate-down.enabled {
+  border-top-color: rgba(217, 0, 119, 0.9);
+}
+
+/* line 227, ../dress-code.scss */
+.reveal .controls div.navigate-left.enabled:hover {
+  border-right-color: rgba(217, 0, 119, 0.8);
+}
+
+/* line 231, ../dress-code.scss */
+.reveal .controls div.navigate-right.enabled:hover {
+  border-left-color: rgba(217, 0, 119, 0.8);
+}
+
+/* line 235, ../dress-code.scss */
+.reveal .controls div.navigate-up.enabled:hover {
+  border-bottom-color: rgba(217, 0, 119, 0.8);
+}
+
+/* line 239, ../dress-code.scss */
+.reveal .controls div.navigate-down.enabled:hover {
+  border-top-color: rgba(217, 0, 119, 0.8);
+}
+
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+/* line 246, ../dress-code.scss */
+.reveal .progress {
+  background: rgba(0, 0, 0, 0.2);
+}
+
+/* line 250, ../dress-code.scss */
+.reveal .progress span {
+  background: rgba(217, 0, 119, 0.9);
+  -webkit-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -moz-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  -o-transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+  transition: width 800ms cubic-bezier(0.26, 0.86, 0.44, 0.985);
+}
